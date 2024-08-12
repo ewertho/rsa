@@ -1,4 +1,4 @@
-export default {
+const plan = {
   plano_1: {
     id: 1,
     nome: "200 mega",
@@ -32,3 +32,5 @@ export default {
     },
   ],
 };
+
+export default plan;

@@ -14,9 +14,7 @@ const Header = () => {
       <div className="flex items-center">
         <a
           className="link-underline link-underline-black flex items-center"
-          href=""
-          target="_blank"
-          rel="noreferrer"
+          href="#"
         >
           <Image src={rsa} alt="footer_logo" className="w-[4rem]" />
           <span className="text-5xl italic font-bold font-signature ml-2">

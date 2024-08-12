@@ -25,17 +25,15 @@ function Footer() {
               <Image src={anatel} alt="footer_logo" className="w-[8rem]" />
             </div>
             <div className="flex gap-8 text-[18px] pl-8 text-[#646464] justify-center md:justify-start">
-              {iconsTab.map(({ icon }, index) => {
-                return (
-                  <div
-                    key={index}
-                    className="text-2xl bg-[#efefef] p-2 rounded-full hover:bg-[#fcdd09] hover:text-black"
-                    style={{ transition: "all 0.3s" }}
-                  >
-                    {icon}
-                  </div>
-                );
-              })}
+              {iconsTab.map(({ icon }, index) => (
+                <div
+                  key={index}
+                  className="text-2xl bg-[#efefef] p-2 rounded-full hover:bg-[#fcdd09] hover:text-black"
+                  style={{ transition: "all 0.3s" }}
+                >
+                  {icon}
+                </div>
+              ))}
             </div>
 
             {/* middle div */}
@@ -44,7 +42,7 @@ function Footer() {
 
               <span className="top-[33px] absolute w-[7rem] h-[4px] bg-[#fcdd09]"></span>
               {Constants.links.map(({ id, link, ref }) => (
-                <Link href={ref}>
+                <Link href={ref} key={id}>
                   <p className="text-[16px] duration-200 hover:text-[#fcdd09] cursor-pointer text-[#646464] font-medium hover:font-bold">
                     {link}
                   </p>
