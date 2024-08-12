@@ -1,6 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "ArgentumSans-Black";
+  src: url("../fonts/ArgentumSans-Black.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ArgentumSans-Light";
+  src: url("..\/fonts/ArgentumSans-Light.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -24,6 +40,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  font-family: "ArgentumSans-Light", "ArgentumSans-Black";
 }
 
 @layer utilities {

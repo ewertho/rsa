@@ -1,0 +1,227 @@
+.footer {
+  text-align: start;
+  margin-top: 10px;
+  padding-top: 20px;
+  background-image: url("../../assets/png/gradiente01.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+p {
+  padding-left: 1rem;
+}
+
+.footer-btn-close {
+  width: 150px;
+  padding: 10px;
+  text-decoration: none;
+  background-color: #cfcca8;
+  color: #000000;
+  border-radius: 3px;
+}
+
+#footer-logo img {
+  margin-bottom: 1rem;
+}
+
+#content-back {
+  min-height: 3rem;
+  overflow: visible;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#fixed-wpp {
+  font-size: 1.5rem;
+  color: var(--base-white);
+  background-color: var(--gree-base);
+
+  position: fixed;
+  bottom: 2rem;
+  right: 3rem;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.202);
+
+  height: 3rem;
+  width: 3rem;
+  border-radius: 2rem;
+  z-index: 100;
+
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#fixed-wpp a span {
+  color: var(--base-white);
+}
+
+/*==== Footer ============================ */
+#footer {
+  max-width: 100vw;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  color: var(--base-white);
+  position: relative;
+}
+
+#elipse-footer {
+  min-width: 100vw;
+  margin-bottom: -2px;
+}
+
+#info-footer {
+  display: grid;
+  grid-template-columns: 2fr 1fr 3fr;
+}
+
+#info-footer h2 {
+  font-size: var(--text-big);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.ctt {
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+  font-size: var(--text-small);
+  transition: 0.2s;
+  color: var(--base-white);
+}
+.ctt:hover,
+#enjoy ul li:hover {
+  color: rgb(113, 53, 8);
+  cursor: pointer;
+  transition: 0.4s;
+}
+.ctt span {
+  margin-right: 1rem;
+}
+
+#enjoy ul li {
+  margin-bottom: 0.5rem;
+  transition: 0.2s;
+  font-size: var(--text-small);
+  color: var(--base-white);
+}
+
+#sintercom-info {
+  justify-self: end;
+  text-align: right;
+}
+#sintercom-info ul li {
+  margin-bottom: 0.3rem;
+  font-size: var(--text-small);
+}
+
+#copy {
+  font-size: var(--text-small);
+  text-align: center;
+  padding: 0.4rem 0;
+  border-top: 1px solid var(--base-white);
+}
+
+@media (max-width: 1190px) {
+}
+
+@media (max-width: 991px) {
+  #info-footer {
+    grid-template-columns: 3fr 1fr 4fr;
+  }
+}
+
+@media (max-width: 741px) {
+  #info-footer {
+    padding-top: 1rem;
+    grid-template:
+      "contact contact enjoy enjoy" 1fr
+      "sinfo sinfo sinfo sinfo" 1fr
+      / 1fr 1fr 1fr 1fr;
+  }
+
+  #contact-footer {
+    grid-area: contact;
+  }
+
+  #enjoy {
+    grid-area: enjoy;
+    justify-self: right;
+    text-align: right;
+  }
+
+  #sintercom-info {
+    grid-area: sinfo;
+    justify-self: center;
+    margin-top: 1rem;
+    text-align: center;
+    margin-bottom: 0.2rem;
+  }
+
+  #sintercom-info ul li {
+    margin-bottom: 0.1rem;
+  }
+
+  #footer-logo img {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 550px) {
+  #info-footer {
+    padding-top: 1rem;
+    grid-template:
+      "contact" 1fr
+      "enjoy" 0.5fr
+      "sinfo" 1fr;
+  }
+
+  #enjoy {
+    justify-self: left;
+    text-align: left;
+    margin-top: 1rem;
+  }
+
+  #enjoy ul li {
+    margin-bottom: 0.3rem;
+  }
+  #info-footer h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  .ctt {
+    margin-right: 5rem;
+  }
+  .ctt span {
+    margin-right: 0.5rem;
+  }
+
+  :root {
+    --text-big: 1.3rem;
+    --text-small: 0.9rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .ctt {
+    margin-right: 3rem;
+  }
+
+  my-go-top {
+    left: 1rem;
+  }
+
+  #fixed-wpp {
+    right: 1rem;
+  }
+
+  my-go-top,
+  #fixed-wpp {
+    height: 2.5rem;
+    width: 2.5rem;
+    font-size: 1.2rem;
+  }
+}

@@ -6,12 +6,27 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        hero: "url('../assets/images/monte.jpg')",
+      },
+      colors: {
+        gray: {
+          100: "#F5F5F5",
+          200: "#E0E0E0",
+          300: "#BDBDBD",
+          400: "#9E9E9E",
+          500: "#757575",
+          600: "#616161",
+          700: "#424242",
+          800: "#212121",
+          900: "#121212",
+        },
+        yellow: {
+          500: "#FFD700",
+        },
       },
     },
   },

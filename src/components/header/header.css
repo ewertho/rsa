@@ -1,0 +1,333 @@
+/*====  HEADER ============================ */
+
+#header {
+  width: 100%;
+  max-width: 100%;
+  height: var(--header-height);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.216);
+}
+
+#header .container {
+  display: grid;
+  grid-template-columns: 2fr 5fr 2fr;
+  align-items: center;
+  height: 100%;
+  font-weight: 700;
+}
+
+/**** Logo ****/
+#logo-head img {
+  width: 130px;
+}
+
+/**** Nav ****/
+#menu {
+  display: flex;
+  justify-content: space-around;
+}
+
+#menu > a,
+#menu-company p {
+  color: black;
+  font-size: var(--text-small);
+  position: relative;
+  transition: 0.2s;
+}
+
+#menu > a::after,
+#menu-company > p::after {
+  content: "";
+  width: 0%;
+  height: 1rem;
+  background-color: var(--orange-base);
+  display: block;
+
+  position: absolute;
+  padding: 0.6rem 0.8rem;
+  left: -0.8rem;
+  top: -0.5rem;
+  z-index: -1;
+  border-radius: 1rem;
+
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s;
+}
+#menu a:hover,
+#menu-company p:hover {
+  color: var(--base-white);
+  cursor: pointer;
+}
+
+#menu a:hover::after,
+#menu-company p:hover::after {
+  width: 100%;
+  visibility: visible;
+  opacity: 100%;
+  transition: 0.1s;
+}
+
+#menu-company {
+  position: relative;
+}
+
+#subitem {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  border-radius: 1rem;
+  z-index: 15;
+
+  background-color: var(--orange-base);
+  border: 1px solid var(--base-white);
+  width: calc(100% + 6rem);
+
+  top: 1.8rem;
+  left: -2.9rem;
+
+  padding: 0.5rem 0rem;
+
+  transition: 0.2s;
+}
+
+#subitem li {
+  padding: 0.4rem 0.5rem;
+}
+
+#subitem li a {
+  color: var(--base-white);
+  transition: 0.2s;
+}
+
+#subitem li a:hover {
+  color: var(--orange-base);
+  transition: 0.2s;
+}
+
+#subitem.hover {
+  visibility: visible;
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#login {
+  justify-self: end;
+}
+#login a p {
+  color: var(--base-white);
+}
+#login a p,
+#login a span {
+  color: var(--base-white);
+  font-size: var(--text-small);
+  padding: 0.5rem;
+  background-color: var(--orange-base);
+  border-radius: 20px;
+  border: 2px solid var(--orange-base);
+  transition: 0.2s;
+}
+
+#login a p:hover,
+#login a span:hover {
+  background-color: var(--base-white);
+  border: 2px solid var(--orange-base);
+  color: var(--orange-base);
+  transition: 0.2s;
+}
+
+#menu-mobile,
+.icon-user,
+#info-mobile {
+  display: none;
+  color: #000;
+}
+
+@media (max-width: 1190px) {
+}
+
+@media (max-width: 991px) {
+  #header .container {
+    grid-template-columns: 7fr 1fr 1fr;
+    grid-template-areas: "logo login mmobile";
+  }
+
+  /**** logo ****/
+
+  /**** login ****/
+  #login a p {
+    display: none;
+  }
+
+  #login {
+    grid-area: login;
+  }
+
+  #login a span {
+    background-color: rgba(255, 222, 173, 0);
+    border: 0px;
+    display: block;
+    color: var(--orange-base);
+    font-size: 2rem;
+  }
+
+  #login a span:hover {
+    background-color: var(--base-color);
+    border: 0;
+    color: var(--gree-base);
+    transition: 0.2s;
+  }
+
+  /**** menu area ****/
+  #content-menumobile.show {
+    top: 0rem;
+    transition: 0.2s;
+    z-index: 2;
+  }
+
+  #content-menumobile {
+    background-color: var(--orange-base);
+    color: var(--base-white);
+    font-size: var(--text-small);
+    font-weight: 600;
+
+    min-width: 50vw;
+    height: 100vh;
+    right: 0;
+    top: -150%;
+
+    position: absolute;
+    padding-top: var(--header-height);
+    padding-left: 2rem;
+
+    transition: 0.2s;
+    visibility: visible;
+  }
+
+  /**** menu ****/
+  #menu {
+    display: grid;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    justify-content: flex-start;
+  }
+
+  #menu a,
+  #menu-company p {
+    color: var(--base-white);
+    font-size: var(--text-medium2);
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  /**** menu subitens ****/
+  #subitem {
+    position: relative;
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+    transition: 0.2s;
+
+    width: 100%;
+    top: 0.6rem;
+    left: 1rem;
+    text-align: left;
+    padding: 0rem 0rem;
+    border: 0;
+  }
+
+  #subitem.click {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+    transition: 0.2s;
+  }
+
+  #subitem li:first-child {
+    margin-bottom: 0.4rem;
+  }
+
+  #subitem li {
+    padding: 0rem 0rem;
+  }
+
+  #subitem li a {
+    font-size: var(--text-medium2);
+  }
+
+  /**** menu icons ****/
+
+  #menu-mobile {
+    font-size: 2.2rem;
+    color: var(--orange-base);
+    display: block;
+    cursor: pointer;
+    grid-area: mmobile;
+    justify-content: right;
+    display: grid;
+  }
+
+  #menu-mobile .icon-x {
+    position: absolute;
+    color: var(--base-white);
+    visibility: hidden;
+    z-index: 1;
+    opacity: 0;
+    transition: 0.2s;
+    top: 1.4rem;
+    right: 2rem;
+  }
+
+  #menu-mobile .icon-x.show {
+    transition: 0.2s;
+    visibility: visible;
+    opacity: 1;
+    color: var(--base-white);
+    z-index: 2;
+  }
+
+  /**** menu infos ****/
+
+  #info-mobile {
+    display: block;
+  }
+
+  #info-mobile a .location {
+    display: flex;
+    align-items: center;
+    background-color: var(--gree-base);
+    width: fit-content;
+    padding: 0.3rem 0.5rem;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: var(--text-medium2);
+    color: var(--base-white);
+  }
+
+  #info-mobile .location span {
+    font-size: 1rem;
+  }
+
+  #social-icon {
+    margin-top: 0.5rem;
+    transition: 0.2s;
+  }
+
+  #social-icon span:hover {
+    color: var(--gree-base);
+    transition: 0.2s;
+  }
+
+  #social-icon a {
+    color: var(--base-white);
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 741px) {
+  #content-menumobile {
+    min-width: 100vw;
+  }
+}
+
+@media (max-width: 549px) {
+}
