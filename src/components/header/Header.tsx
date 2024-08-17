@@ -34,7 +34,7 @@ const Header = () => {
         ))}
       </ul>
 
-      <div className="rounded-2xl px-4 bg-yellow-600 capitalize text-white hover:text-white hover:scale-105 duration-200">
+      <div className="rounded-2xl px-4 bg-yellow-600 capitalize max-sm:hidden text-white hover:text-white hover:scale-105 duration-200">
         <Link href={"#"}>Area do Cliente</Link>
       </div>
 
@@ -46,18 +46,23 @@ const Header = () => {
       </div>
 
       {nav && (
-        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500">
-          {Constants.links.map(({ id, link }) => (
-            <li
-              key={id}
-              className="px-4 cursor-pointer capitalize py-6 text-4xl"
-            >
-              <Link onClick={() => setNav(!nav)} href={link}>
-                {link}
-              </Link>
+        <>
+          <ul className="flex flex-col justify-center z-10 items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500">
+            {Constants.links.map(({ id, link, ref }) => (
+              <li
+                key={id}
+                className="px-4 cursor-pointer capitalize py-6 text-4xl"
+              >
+                <Link onClick={() => setNav(!nav)} href={ref}>
+                  {link}
+                </Link>
+              </li>
+            ))}
+            <li className="px-4 cursor-pointer capitalize py-6 text-4xl ">
+              <Link href={"#"}>Area do Cliente</Link>
             </li>
-          ))}
-        </ul>
+          </ul>
+        </>
       )}
     </div>
   );

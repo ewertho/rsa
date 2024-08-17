@@ -59,6 +59,7 @@ export const CardsTop = () => {
             <ScrollAnimation
               animateIn="bounceInDown"
               animateOut="bounceOutUp"
+              animateOnce={true}
               className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center"
             >
               <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
@@ -78,6 +79,7 @@ export const CardsTop = () => {
             </ScrollAnimation>
             <ScrollAnimation
               animateIn="fadeIn"
+              animateOnce
               className="w-full md:w-4/12 px-4 text-center animate__bounce"
             >
               <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
@@ -98,6 +100,7 @@ export const CardsTop = () => {
             <ScrollAnimation
               animateIn="bounceInUp"
               animateOut="bounceOutDown"
+              animateOnce
               className="pt-6 w-full md:w-4/12 px-4 text-center "
             >
               <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">

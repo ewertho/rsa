@@ -1,7 +1,7 @@
 const plan = {
   plano_1: {
     id: 1,
-    nome: "200 mega",
+    nome: "80 mega",
     preco: "79,90",
   },
   plano_2: {

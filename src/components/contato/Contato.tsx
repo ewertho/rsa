@@ -1,7 +1,7 @@
 "use client";
 
 const Contato = () => {
-  const planos = ["200 mega", "500 mega", "700 mega"];
+  const planos = ["80 mega", "500 mega", "700 mega"];
   return (
     <>
       <div
@@ -11,10 +11,10 @@ const Contato = () => {
         <div className="max-w-6xl mx-auto sm:px-6 lg:px-8">
           <div className="mt-8 overflow-hidden">
             <div className="grid grid-cols-1 md:grid-cols-2">
-              <h1 className="text-4xl sm:text-5xl text-gray-800 dark:text-yellow-600 font-extrabold tracking-tight">
+              <h1 className="text-4xl sm:text-5xl pl-5 text-gray-800 dark:text-yellow-600 font-extrabold tracking-tight">
                 Assine Agora!
               </h1>
-              <p className="text-normal text-lg sm:text-2xl font-medium text-gray-600 dark:text-gray-400 mt-2">
+              <p className="text-normal text-lg sm:text-2xl p-5 font-medium md:ml-8 text-gray-600 dark:text-gray-400 mt-2">
                 Basta preencher o cadastro que o quanto antes, um de nossos
                 atendentes estara entrando em contato, para ativar sua nova
                 internet.
@@ -31,7 +31,7 @@ const Contato = () => {
                     stroke-linejoin="round"
                     stroke-width="1.5"
                     viewBox="0 0 24 24"
-                    className="w-8 h-8 text-gray-500"
+                    className="w-14 h-14 text-gray-500"
                   >
                     <path
                       stroke-linecap="round"
@@ -46,9 +46,9 @@ const Contato = () => {
                       d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                     />
                   </svg>
-                  <div className="ml-4 text-md tracking-wide font-semibold w-40">
-                    Rua Vereador José Vicente Sobrinho, n° 821. Engenhoca,
-                    Niterói - 24110-441
+                  <div className="ml-4 text-md tracking-wide font-semibold">
+                    RSA SERVIÇOS E COMÉRCIO LTDA RUA MAURICIO DE ABREU, 932 -
+                    CEP: 24425-300 São Gonçalo - RJ
                   </div>
                 </div>
 
@@ -69,8 +69,8 @@ const Contato = () => {
                       d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                     />
                   </svg>
-                  <div className="ml-4 text-md tracking-wide font-semibold w-40">
-                    (21) 98073-6908
+                  <div className="ml-4 text-md tracking-wide font-semibold">
+                    (21) 3603-5787
                   </div>
                 </div>
 
@@ -91,8 +91,50 @@ const Contato = () => {
                       d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                     />
                   </svg>
+                  <div className="ml-4 text-md tracking-wide font-semibold ">
+                    (21)3703-6446
+                  </div>
+                </div>
+                <div className="flex items-center mt-2 text-gray-600 dark:text-gray-400">
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    viewBox="0 0 24 24"
+                    className="w-8 h-8 text-gray-500"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.5"
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                    />
+                  </svg>
                   <div className="ml-4 text-md tracking-wide font-semibold w-40">
-                    0800 3003 009
+                    21 96401-5417
+                  </div>
+                </div>
+                <div className="flex items-center mt-2 text-gray-600 dark:text-gray-400">
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    viewBox="0 0 24 24"
+                    className="w-8 h-8 text-gray-500"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.5"
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                    />
+                  </svg>
+                  <div className="ml-4 text-md tracking-wide font-semibold w-40">
+                    21 97703-0205
                   </div>
                 </div>
               </div>
