@@ -16,8 +16,12 @@ export const Plans: React.FC = () => {
               Escolha o melhor plano para você e
               <br className="hidden md:block" /> sua familia.
             </p>
+            <p className="text-gray-300 font-bold">
+              *Consulte disponibilidade, preços podem sofrer variação de acordo
+              com região
+            </p>
           </div>
-          <div className="pt-12 md:pt-24 flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0">
+          <div className="pt-12 md:pt-10 flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0">
             {/* <!-- Basic Card --> */}
 
             <ScrollAnimation

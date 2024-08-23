@@ -6,7 +6,7 @@ const Contato = () => {
     <>
       <div
         id="contact"
-        className="relative flex items-top justify-center min-h-screen w-full bg-white dark:bg-gray-900 sm:items-center sm:pt-0"
+        className="relative flex items-top justify-center min-h-screen w-full bg-white dark:bg-gray-900 sm:items-center max-lg:mt-6"
       >
         <div className="max-w-6xl mx-auto sm:px-6 lg:px-8">
           <div className="mt-8 overflow-hidden">

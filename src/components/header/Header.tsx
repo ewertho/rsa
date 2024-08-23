@@ -35,7 +35,11 @@ const Header = () => {
       </ul>
 
       <div className="rounded-2xl px-4 bg-yellow-600 capitalize max-sm:hidden text-white hover:text-white hover:scale-105 duration-200">
-        <Link href={"#"}>Area do Cliente</Link>
+        <Link
+          href={"https://ixc.agilinternet.net.br/central_assinante_web/login"}
+        >
+          Area do Cliente
+        </Link>
       </div>
 
       <div
@@ -59,7 +63,13 @@ const Header = () => {
               </li>
             ))}
             <li className="px-4 cursor-pointer capitalize py-6 text-4xl ">
-              <Link href={"#"}>Area do Cliente</Link>
+              <Link
+                href={
+                  "https://ixc.agilinternet.net.br/central_assinante_web/login"
+                }
+              >
+                Area do Cliente
+              </Link>
             </li>
           </ul>
         </>
