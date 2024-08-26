@@ -1,7 +1,26 @@
 "use client";
 
+import { useState } from "react";
+
 const Contato = () => {
   const planos = ["80 mega", "500 mega", "700 mega"];
+
+  const [name, setName] = useState("");
+  const [endereco, setEndereco] = useState("");
+  const [telefone, setTelefone] = useState("");
+  const [plano, setPlano] = useState(planos[0]);
+
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+
+    const message = `Olá, meu nome é ${name}. Gostaria de contratar o plano ${plano}. Meus dados são:
+    \nEndereço: ${endereco}
+    \nTelefone: ${telefone}`;
+
+    const url = `https://wa.me/21964015417?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank");
+  };
+
   return (
     <>
       <div
@@ -11,13 +30,12 @@ const Contato = () => {
         <div className="max-w-6xl mx-auto sm:px-6 lg:px-8">
           <div className="mt-8 overflow-hidden">
             <div className="grid grid-cols-1 md:grid-cols-2">
-              <h1 className="text-4xl sm:text-5xl pl-5 text-gray-800 dark:text-yellow-600 font-extrabold tracking-tight">
+              <h1 className="text-4xl sm:text-5xl pl-5 text-gray-800 dark:text-yellow-600 text-center self-center font-extrabold tracking-tight">
                 Assine Agora!
               </h1>
               <p className="text-normal text-lg sm:text-2xl p-5 font-medium md:ml-8 text-gray-600 dark:text-gray-400 mt-2">
                 Basta preencher o cadastro que o quanto antes, um de nossos
-                atendentes estara entrando em contato, para ativar sua nova
-                internet.
+                atendentes entrara em contato, para ativar sua nova internet.
               </p>
               <div className="p-6 mr-2 bg-gray-100 dark:bg-gray-800 sm:rounded-lg">
                 <h3 className="text-normal text-lg sm:text-2xl font-medium text-gray-600 dark:text-gray-400 mt-2">
@@ -139,30 +157,39 @@ const Contato = () => {
                 </div>
               </div>
 
-              <form className="p-6 flex flex-col justify-center">
+              <form
+                className="px-6 flex flex-col justify-center"
+                onSubmit={handleSubmit}
+              >
                 <div className="flex flex-col">
                   <label htmlFor="name" className="hidden">
                     Nome
                   </label>
                   <input
-                    type="name"
+                    type="text"
                     name="name"
                     id="name"
                     placeholder="Nome"
-                    className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none"
+                    className="w-100 mt-2 py-3 px-3 rounded-lg dark:text-white bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    required
                   />
                 </div>
 
                 <div className="flex flex-col mt-2">
-                  <label htmlFor="email" className="hidden">
+                  <label htmlFor="endereco" className="hidden">
                     Endereço
                   </label>
                   <input
-                    type="email"
-                    name="email"
-                    id="email"
+                    type="text"
+                    name="endereco"
+                    id="endereco"
                     placeholder="Endereço"
-                    className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none"
+                    className="w-100 mt-2 py-3 px-3 rounded-lg dark:text-white bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none"
+                    value={endereco}
+                    onChange={(e) => setEndereco(e.target.value)}
+                    required
                   />
                 </div>
 
@@ -175,7 +202,10 @@ const Contato = () => {
                     name="tel"
                     id="tel"
                     placeholder="Telefone"
-                    className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none"
+                    className="w-100 mt-2 py-3 px-3 rounded-lg dark:text-white bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none"
+                    value={telefone}
+                    onChange={(e) => setTelefone(e.target.value)}
+                    required
                   />
                 </div>
 
@@ -183,9 +213,16 @@ const Contato = () => {
                   <label className="py-1" htmlFor="plano">
                     Planos
                   </label>
-                  <select className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-400 font-semibold focus:border-indigo-500 focus:outline-none">
+                  <select
+                    name="plano"
+                    id="plano"
+                    className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-400 font-semibold focus:border-indigo-500 focus:outline-none"
+                    value={plano}
+                    onChange={(e) => setPlano(e.target.value)}
+                    required
+                  >
                     {planos.map((valor, index) => (
-                      <option className="text-white" key={index} value={valor}>
+                      <option key={index} value={valor}>
                         {valor}
                       </option>
                     ))}
