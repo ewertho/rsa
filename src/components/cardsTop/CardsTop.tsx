@@ -1,24 +1,60 @@
 "use client";
 
-// import imageBackground from "@/assets/images/pexels-thirdman-5257759.jpg";
-// import Image from "next/image";
+import imageBackground from "@/assets/images/02-1600 x720.png";
+import imageBackground2 from "@/assets/images/Banner 01.png";
+import Image from "next/image";
 import ScrollAnimation from "react-animate-on-scroll";
 import { FaAward, FaFingerprint, FaStar } from "react-icons/fa";
+import "swiper/css/autoplay";
+import "swiper/css/pagination";
+import { Autoplay } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import Constants from "@/common/Constants";
+import Link from "next/link";
+import "swiper/css";
 
 export const CardsTop = () => {
   return (
     <section className="relative w-full bg-blueGray-50">
+      <Swiper
+        className="mySwiper"
+        pagination={true}
+        autoplay={{ delay: 4800 }}
+        modules={[Autoplay]}
+        speed={1000}
+        slidesPerView={1}
+        mousewheel={true}
+        keyboard={true}
+        loop={true}
+      >
+        <SwiperSlide>
+          <Link href={Constants.links[2].ref}>
+            <Image
+              src={imageBackground}
+              alt="footer_logo"
+              className="object-cover"
+            />
+          </Link>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Link href={Constants.links[2].ref}>
+            <Image
+              src={imageBackground2}
+              alt="footer_logo"
+              className="object-cover"
+            />
+          </Link>
+        </SwiperSlide>
+      </Swiper>
+
       <div className="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75">
         <div className="absolute top-0 w-full h-full bg-center bg-cover">
           <span
             id="blackOverlay"
             className="w-full h-full absolute opacity-75 bg-black"
           ></span>
-          {/* <Image
-            src={imageBackground}
-            alt="footer_logo"
-            className="w-full h-full overflow-y-hidden"
-          /> */}
         </div>
         <div className="container relative mx-auto">
           <div className="items-center flex flex-wrap">
@@ -27,11 +63,6 @@ export const CardsTop = () => {
                 <h1 className="text-white font-semibold text-5xl">
                   Sua nova Internet, do jeito que você jamais imaginou
                 </h1>
-                {/* <p className="mt-4 text-lg text-blueGray-200">
-                  This is a simple example of a Landing Page you can build using
-                  Notus JS. It features multiple CSS components based on the
-                  Tailwind CSS design system.
-                </p> */}
               </div>
             </div>
           </div>
