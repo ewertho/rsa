@@ -22,9 +22,30 @@ function Footer() {
             {/* logo side */}
             <div className="flex flex-col  md:p-5 py-4 gap-8">
               <Image src={anatel} alt="footer_logo" className="w-[8rem]" />
+              <div>
+                <p className="text-[16px] text-white font-semibold">
+                  Credenciada na Anatel sobre o
+                </p>
+                <p className="text-[16px] text-white font-semibold">
+                  processo SEI n° 53500.026288/2022-91
+                </p>
+                <p className="text-[16px] text-white font-semibold">
+                  e registrada ao CREA sobre o n° 45775779000155
+                </p>
+              </div>
             </div>
             <div className="flex flex-col  md:p-5 py-4 gap-8">
               <Image src={rsa} alt="footer_logo" className="w-[14rem]" />
+              <div>
+                <p className="text-[16px] text-white font-semibold">
+                  <span className="text-[#9e9d9d]">CNPJ:</span>{" "}
+                  45.775.779/0001-55
+                </p>
+                <p className="text-[16px] text-white font-semibold">
+                  <span className="text-[#9e9d9d]">Razão Social:</span> RSA II
+                  SERVICOS E COMERCIO LTDA
+                </p>
+              </div>
             </div>
             {/* <div className="flex gap-8 text-[18px] pl-8 text-[#646464] justify-center md:justify-start">
               {iconsTab.map(({ icon }, index) => (
