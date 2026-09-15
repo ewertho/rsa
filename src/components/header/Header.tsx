@@ -36,7 +36,7 @@ const Header = () => {
 
       <div className="rounded-2xl px-4 bg-yellow-600 capitalize max-sm:hidden text-white hover:text-white hover:scale-105 duration-200">
         <Link
-          href={"https://ixc.agilinternet.net.br/central_assinante_web/login"}
+          href={"https://agilinternet.sgplocal.com.br/central"}
         >
           Area do Cliente
         </Link>
@@ -65,7 +65,7 @@ const Header = () => {
             <li className="px-4 cursor-pointer capitalize py-6 text-4xl ">
               <Link
                 href={
-                  "https://ixc.agilinternet.net.br/central_assinante_web/login"
+                  "https://agilinternet.sgplocal.com.br/central"
                 }
               >
                 Area do Cliente
